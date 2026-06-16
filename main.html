@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Shopping Cart Layout</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css"
+    >
+
     <style>
-        .block-heading{
-            text-align:center;
-            color:#3b99e0;
-            margin-bottom:30px;
+        .block-heading {
+            text-align: center;
+            color: #3b99e0;
+            margin-bottom: 30px;
         }
 
-        .summary{
-            background-color:#f7fbff;
-            border-top:3px solid #5ea4f3;
-            padding:20px;
+        .summary {
+            background-color: #f7fbff;
+            border-top: 3px solid #5ea4f3;
+            padding: 20px;
         }
 
-        .summary-item{
-            border-bottom:1px solid #d5d5d5;
-            padding:8px 0;
+        .summary-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #d5d5d5;
+        }
+
+        .product {
+            padding: 15px 0;
         }
     </style>
 </head>
@@ -29,27 +40,28 @@
     <div class="block-heading">
         <h2>Shopping cart</h2>
         <p>
-            The customer is very important, the customer will be followed by
-            the customer.
+            The customer is very important, the customer will
+            be followed by the customer.
         </p>
     </div>
 
     <div class="row">
 
-        <!-- col-lg-8 -->
+        <!-- Products Section -->
         <div class="col-lg-8">
 
             <div class="product">
-                <div class="row align-items-center mb-4">
+                <div class="row align-items-center">
                     <div class="col-md-3">
                         <img
-                            class="img-fluid"
                             src="https://via.placeholder.com/100"
-                            alt="product">
+                            alt="product"
+                            class="img-fluid"
+                        >
                     </div>
 
                     <div class="col-md-6">
-                        <h6>I am very sorry</h6>
+                        <a href="#">I am very sorry</a>
                         <p>
                             Display: 5 inches<br>
                             RAM: 4GB<br>
@@ -58,32 +70,12 @@
                     </div>
 
                     <div class="col-md-3">
-                        <input type="number" class="form-control" value="0">
-                        <p>$120</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-3">
-                        <img
-                            class="img-fluid"
-                            src="https://via.placeholder.com/100"
-                            alt="product">
-                    </div>
-
-                    <div class="col-md-6">
-                        <h6>I am very sorry</h6>
-                        <p>
-                            Display: 5 inches<br>
-                            RAM: 4GB<br>
-                            Memory: 32GB
-                        </p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <input type="number" class="form-control" value="1">
+                        <label>Quantity:</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="0"
+                        >
                         <p>$120</p>
                     </div>
                 </div>
@@ -93,13 +85,14 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <img
-                            class="img-fluid"
                             src="https://via.placeholder.com/100"
-                            alt="product">
+                            alt="product"
+                            class="img-fluid"
+                        >
                     </div>
 
                     <div class="col-md-6">
-                        <h6>I am very sorry</h6>
+                        <a href="#">I am very sorry</a>
                         <p>
                             Display: 5 inches<br>
                             RAM: 4GB<br>
@@ -108,7 +101,43 @@
                     </div>
 
                     <div class="col-md-3">
-                        <input type="number" class="form-control" value="1">
+                        <label>Quantity:</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="1"
+                        >
+                        <p>$120</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <img
+                            src="https://via.placeholder.com/100"
+                            alt="product"
+                            class="img-fluid"
+                        >
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href="#">I am very sorry</a>
+                        <p>
+                            Display: 5 inches<br>
+                            RAM: 4GB<br>
+                            Memory: 32GB
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Quantity:</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="1"
+                        >
                         <p>$120</p>
                     </div>
                 </div>
@@ -116,7 +145,7 @@
 
         </div>
 
-        <!-- col-lg-4 -->
+        <!-- Summary Section -->
         <div class="col-lg-4">
             <div class="summary">
 
@@ -142,7 +171,7 @@
                     <span>$360</span>
                 </div>
 
-                <button class="btn btn-primary btn-block">
+                <button class="btn btn-primary btn-block mt-3">
                     checkout
                 </button>
 
